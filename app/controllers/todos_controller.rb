@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   before_action :set_todo, only: %i[show update destroy]
-  before_action :authenticate_request!
+  # before_action :authenticate_request!
 
   # GET /todos
   def index
@@ -22,7 +22,7 @@ class TodosController < ApplicationController
   # PUT /todos/:id
   def update
     @todo.update(todo_params)
-    head :no_content
+    json_response(@todo)
   end
 
   # DELETE /todos/:id

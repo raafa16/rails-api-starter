@@ -18,6 +18,7 @@
 
 # Ignore vendor bundle
 /vendor/.bundle/*
+/vendor/*
 
 # Ignore .ruby-version
 .ruby-version
